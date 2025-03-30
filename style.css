@@ -1,19 +1,108 @@
-/* Rainbow Gradient Background */
+/* General Styles */
 body {
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #00d800, #0061ff, #8b00ff, #ff0080);
-    background-size: 400% 400%; /* Large background for smooth animation */
-    animation: gradientAnimation 10s ease infinite; /* Animating the gradient */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    animation: rainbow 10s ease infinite; /* Animation for the rainbow effect */
+  }
+  
+  .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: 'Arial', sans-serif;
-    color: white; /* Text color to make sure it's readable on the background */
-    margin: 0;
+    flex-direction: column;
   }
   
-  /* Keyframes for the gradient animation */
-  @keyframes gradientAnimation {
+  .name {
+    text-align: center;
+    font-size: 3rem;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .letter-container {
+    margin: 0 15px; /* Adds a margin between letters */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon {
+    font-size: 3rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 3px solid #fff;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+  
+  .icon:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Circle Shape */
+  .circle {
+    border-radius: 50%;
+    background-color: #007bff;
+    width: 70px;
+    height: 70px;
+  }
+  
+  /* Square Shape */
+  .square {
+    background-color: #28a745;
+    width: 70px;
+    height: 70px;
+  }
+  
+  /* Rectangle Shape */
+  .rectangle {
+    background-color: #ffc107;
+    width: 100px;
+    height: 70px;
+  }
+  
+  /* Triangle Shape */
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-bottom: 70px solid #dc3545;
+    margin: 0 15px; /* Adds a margin for triangle */
+  }
+  
+  /* Diamond Shape */
+  .diamond {
+    width: 70px;
+    height: 70px;
+    background-color: #6610f2;
+    transform: rotate(45deg);
+    margin: 0 15px; /* Adds a margin for diamond */
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  .name-container {
+    margin: 20px;
+  }
+  
+  /* Rainbow Animation */
+  @keyframes rainbow {
     0% {
       background-position: 0% 50%;
     }
@@ -23,36 +112,5 @@ body {
     100% {
       background-position: 0% 50%;
     }
-  }
-  
-  .image-container {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
-    padding: 30px;
-    border-radius: 10px;
-  }
-  
-  .image-container img {
-    width: 80px;
-    height: 80px;
-    margin: 0.5rem;
-    transition: all 0.3s ease-in-out;
-    transform: scale(1) rotate(0deg); /* Default state: normal size, no rotation */
-  }
-  
-  /* Hover animation for images */
-  .image-container img:hover {
-    transform: scale(1.2) rotate(15deg); /* Scale the image and rotate it slightly */
-  }
-  
-  h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #fff; /* White color for the heading */
-  }
-  
-  p {
-    font-size: 1.2rem;
-    color: #fff; /* White color for the paragraph text */
   }
   
