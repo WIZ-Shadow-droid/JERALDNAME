@@ -1,0 +1,58 @@
+/* Rainbow Gradient Background */
+body {
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #00d800, #0061ff, #8b00ff, #ff0080);
+    background-size: 400% 400%; /* Large background for smooth animation */
+    animation: gradientAnimation 10s ease infinite; /* Animating the gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: white; /* Text color to make sure it's readable on the background */
+    margin: 0;
+  }
+  
+  /* Keyframes for the gradient animation */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .image-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  .image-container img {
+    width: 80px;
+    height: 80px;
+    margin: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1) rotate(0deg); /* Default state: normal size, no rotation */
+  }
+  
+  /* Hover animation for images */
+  .image-container img:hover {
+    transform: scale(1.2) rotate(15deg); /* Scale the image and rotate it slightly */
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff; /* White color for the heading */
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #fff; /* White color for the paragraph text */
+  }
+  
